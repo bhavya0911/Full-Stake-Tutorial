@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
-import HMR_HOST from '.gitpod.yml';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,8 +12,8 @@ const config = {
 		vite: {
 			server: {
 				hmr: {
-					clientPort: HMR_HOST ? 443: 3000,
-					host: HMR_HOST ? HMR_HOST.substring("https://".length) : "localhost"
+					clientPort: process.env.HMR_HOST ? 443: 3000,
+					host: process.env.HMR_HOST ? process.env.HMR_HOST.substring("https://".length) : "localhost"
 				}
 			}
 		}
