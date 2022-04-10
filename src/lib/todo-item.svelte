@@ -9,7 +9,7 @@
         <button aria-label="Save todo">Save</button>
     </form>
 
-    <form action="">
+    <form action="" method="">
         <button aria-label="Delete todo">Delete</button>
     </form>
 </div>
